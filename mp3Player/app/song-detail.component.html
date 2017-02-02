@@ -1,0 +1,20 @@
+<div *ngIf="song">
+  <h2>{{song.artist}} details!</h2>
+  <div>
+    <label>#: {{song.id}}</label>
+  </div>
+  <div>
+    <label>Track: </label> {{song.artist}} - {{song.name}}
+  </div>
+  <div>
+    <label>Duration: {{song.duration}}</label> 
+  </div>
+  <div>
+    <label>Year: </label> {{song.year}}
+  </div>
+  <div>
+    <label>Song: </label>
+    <input [(ngModel)]="song.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>

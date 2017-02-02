@@ -1,0 +1,10 @@
+<h3>Most Played Songs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let song of songs"  [routerLink]="['/detail', song.id]"  class="col-1-4">
+    <div class="module song">
+      <h4>{{song.artist}}</h4>
+      <p>{{song.name}}</p>
+      <p>{{song.duration}}</p>
+    </div>
+  </a>
+</div>

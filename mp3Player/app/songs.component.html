@@ -1,0 +1,14 @@
+<h3>All Songs</h3>
+<ul class="songs">
+  <li *ngFor="let song of songs"
+    [class.selected]="song === selectedSong"
+    (click)="onSelect(song)">
+    <span class="badge">{{song.duration}}</span> {{song.artist}} - {{song.name}}
+  </li>
+</ul>
+<div *ngIf="selectedSong">
+  <h2>
+    {{selectedSong.name | uppercase}} is my song
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
